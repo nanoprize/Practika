@@ -1,0 +1,149 @@
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <title>Мой JavaScript код</title>
+   </head>
+   <body>
+       <script>
+        //0
+ function task0(){
+    let myVar ='123';
+    if(typeof myVar === "number") {
+    console.log("Это число");
+ }else{
+    console.log("Это не число");
+ }
+ }
+
+ task0();
+ //1
+ function task1(){
+   let zodiacSign = prompt("Какой у вас знак зодиака?");
+
+let message = "";
+
+switch (zodiacSign.toLowerCase()) { // приводим к нижнему регистру для регистронезависимой проверки
+  case "овен":
+    message = "Привет, Овен! Вы полны энергии и энтузиазма!";
+    break;
+  case "телец":
+    message = "Привет, Телец! Вы надёжны и практичны!";
+    break;
+  case "близнецы":
+    message = "Привет, Близнецы! Вы общительны и любознательны!";
+    break;
+  case "рак":
+    message = "Привет, Рак! Вы чувствительны и заботливы!";
+    break;
+  case "лев":
+    message = "Привет, Лев! Вы харизматичны и щедры!";
+    break;
+  case "дева":
+    message = "Привет, Дева! Вы умны и аналитичны!";
+    break;
+  case "весы":
+    message = "Привет, Весы! Вы дипломатичны и уравновешенны!";
+    break;
+  case "скорпион":
+    message = "Привет, Скорпион! Вы страстны и загадочны!";
+    break;
+  case "стрелец":
+    message = "Привет, Стрелец! Вы оптимистичны и свободолюбивы!";
+    break;
+  case "козерог":
+    message = "Привет, Козерог! Вы ответственны и дисциплинированы!";
+    break;
+  case "водолей":
+    message = "Привет, Водолей! Вы оригинальны и независимы!";
+    break;
+  case "рыбы":
+    message = "Привет, Рыбы! Вы мечтательны и сострадательны!";
+    break;
+  default:
+    message = "Извините, но я не знаю такого знака зодиака.";
+    
+}
+alert(message);
+ }
+ task1();
+ //2
+ function task2(){
+   // 2) Вывод чисел от 1 до 40 с использованием 3-х разных циклов
+
+// Цикл for
+console.log("Цикл for:");
+for (let i = 1; i <= 40; i++) {
+  console.log(i);
+}
+
+// Цикл while
+console.log("Цикл while:");
+let j = 1;
+while (j <= 40) {
+  console.log(j);
+  j++;
+}
+
+// Цикл do...while
+console.log("Цикл do...while:");
+let k = 1;
+do {
+  console.log(k);
+  k++;
+} while (k <= 40);}
+task2();
+
+// 3) Создание вирусной страницы с повторяющимся сообщением 
+//function task3(){
+//while(true) {
+//alert("Это вирусное сообщение!");
+//}}
+//task3();
+// 4) Запрос числа больше 5 с проверкой ответа
+function task4(){
+let number;
+do {
+  // Запрашиваем число, пока пользователь не нажмет "Отмена" или не введет корректное значение
+  number = prompt("Введите любое число больше 5:");
+  
+  // Проверяем, не нажал ли пользователь "Отмена"
+  if (number === null) {
+    break;
+  }
+  
+  // Преобразуем строку в число
+  number = Number(number);
+  
+  if (isNaN(number) || number <= 5) {
+    alert("Некорректный ввод. Попробуйте снова.");
+  }
+} while (isNaN(number) || number <= 5);
+
+if (number !== null) {
+  alert("Поздравляем! Вы ввели число " + number);
+}}
+task4();
+
+// 5) Вывод четных чисел от 8 до 20
+function task5(){
+console.log("Четные числа от 8 до 20:");
+for (let i = 8; i <= 20; i++) {
+  if (i % 2 === 0) {
+    alert(i);
+  }
+}}
+task5();
+
+// 6) Вывод нечетных чисел от 1 до 7, пропустив 5
+function task6(){
+console.log("Нечетные числа от 1 до 7, пропустив 5:");
+for (let i = 1; i <= 7; i += 2) {
+  if (i !== 5) {
+    alert(i);
+  }
+}
+ }
+ task6();
+       </script> 
+   </body>
+   </html>
