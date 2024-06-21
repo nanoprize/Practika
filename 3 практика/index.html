@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript: Основы и задачи</title>
+  <meta charset="UTF-8">
+  <style>
+   body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ffe4e1; /* Светло-розовый фон */ 
+}
+
+h1 {
+  color: #ff69b4; 
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  width: 150px; /* Фиксированная ширина кнопки */
+  height: 150px; /* Фиксированная высота кнопки */
+  border-radius: 50%;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+  display: flex;       /* Включаем flexbox для кнопки */
+  align-items: center; /* Выравниваем текст по центру вертикали */
+  justify-content: center; /* Выравниваем текст по центру горизонтали */
+}
+
+button:hover {
+  background-color: #ff4d94;
+}
+  </style>
+</head>
+<body>
+
+<h1>JavaScript: Основы и задачи</h1>
+
+<p>Давайте познакомимся с JavaScript! Как вас зовут?</p>
+
+<script>
+  let userName = prompt("Введите ваше имя:", "Анонимный пользователь");
+  if (userName) {
+    document.write("<p>Привет, " + userName + "! Добро пожаловать в мир JavaScript!</p>");
+  } else {
+    document.write("<p>Привет, Анонимный пользователь! Добро пожаловать в мир JavaScript!</p>");
+  }
+</script>
+
+<h2>Что такое JavaScript?</h2>
+<p>JavaScript - это язык программирования, который делает веб-страницы интерактивными. С его помощью можно создавать анимации, обрабатывать данные, реагировать на действия пользователя и многое другое.</p>
+
+<h2>Где используется JavaScript?</h2>
+<ul>
+  <li>Веб-разработка (фронтенд и бэкенд)</li>
+  <li>Разработка мобильных приложений</li>
+  <li>Создание игр</li>
+  <li>Работа с базами данных</li>
+  <li>И многое другое!</li>
+</ul>
+
+<h2>Когда JavaScript не нужен?</h2>
+<p>JavaScript может быть не нужен для очень простых статических сайтов, где нет никакой интерактивности. Также, если вам нужно создать сложное приложение с высокими требованиями к производительности, возможно, стоит рассмотреть другие языки программирования.</p>
+
+<h2>Давайте попрактикуемся!</h2>
+
+<div class="container">
+
+  <button onclick="task0()">Задача 0</button>
+  <button onclick="task1()">Задача 1</button>
+  <button onclick="task2()">Задача 2</button>
+  <button onclick="task3()">Задача 3 (Осторожно: вирус!)</button>
+  <button onclick="task4()">Задача 4</button>
+  <button onclick="task5()">Задача 5</button>
+  <button onclick="task6()">Задача 6</button>
+  <button onclick="task7()">Задача 7</button>
+  <button onclick="task8()">Задача 8</button>
+  <button onclick="task9()">Задача 9</button>
+  <button onclick="task10()">Задача 10</button>
+  <button onclick="task11()">Задача 11</button>
+  <button onclick="task12()">Задача 12</button>
+  <button onclick="task13()">Задача 13</button>
+  <button onclick="task14()">Задача 14</button>
+  <button onclick="task15()">Задача 15</button>
+  <button onclick="task16()">Задача 16</button>
+  <button onclick="showQuiz()">Пройти тест</button> 
+
+
+</div>
+<div id="quiz-container">
+  <h2>Тест по JavaScript</h2>
+  <form id="quiz-form">
+    </form>
+  <button onclick="checkQuizResults()">Показать результат</button>
+</div>
+
+<div id="quiz-results">
+  <h3>Результаты теста:</h3>
+  <p id="quiz-score"></p>
+  <ul id="quiz-answers"></ul>
+</div>
+
+
+<script>
+  // Задача 0
+  function task0() {
+    let myVariable = 10;
+    let type = typeof myVariable;
+    let message = (type === 'number') ? "Это число!" : "Это не число!";
+    alert("Переменная myVariable имеет тип: " + type + "\n" + message);
+  }
+
+  // Задача 1
+  function task1() {
+    let zodiac = prompt("Введите ваш знак зодиака:");
+    switch (zodiac) {
+      case "Овен":
+        alert("Привет, огненный Овен!");
+        break;
+      case "Телец":
+        alert("Привет, приземленный Телец!");
+        break;
+      // ... остальные знаки зодиака
+      default:
+        alert("Привет, загадочный знак зодиака!");
+    }
+  }
+
+  // Задача 2
+  function task2() {
+    let output = "";
+    // Цикл for
+    for (let i = 1; i <= 40; i++) {
+      output += i + " ";
+    }
+    output += "\n\n";
+    // Цикл while
+    let j = 1;
+    while (j <= 40) {
+      output += j + " ";
+      j++;
+    }
+    output += "\n\n";
+    // Цикл do...while
+    let k = 1;
+    do {
+      output += k + " ";
+      k++;
+    } while (k <= 40);
+    alert(output);
+  }
+
+  // Задача 3 (Вирус!)
+  function task3() {
+    alert("Вирус активирован! (Шутка, конечно же)");
+    while (true) {
+      alert("Это вирусное сообщение!");
+    }
+  }
+
+  // Задача 4
+  function task4() {
+    let num;
+    do {
+      num = prompt("Введите число больше 5:", "");
+      if (num === null) {
+        return; // Выход, если пользователь нажал "Отмена"
+      }
+      num = Number(num);
+    } while (isNaN(num) || num <= 5);
+    alert("Поздравляем! Вы ввели правильное число!");
+  }
+
+  // Задача 5
+  function task5() {
+    let evenNumbers = "";
+    for (let i = 8; i <= 20; i += 2) {
+      evenNumbers += i + " ";
+    }
+    alert("Четные числа от 8 до 20: " + evenNumbers);
+  }
+
+  // Задача 6
+  function task6() {
+    let oddNumbers = "";
+    for (let i = 1; i <= 7; i += 2) {
+      if (i !== 5) {
+        oddNumbers += i + " ";
+      }
+    }
+    alert("Нечетные числа от 1 до 7 (кроме 5): " + oddNumbers);
+  }
+  function task7() {
+    let array1 = [1, 2, 3, 4, 5];
+    let array2 = new Array(6, 7, 8, 9, 10);
+    let array3 = Array.from("hello");
+    alert("Массив 1: " + array1);
+    alert("Массив 2: " + array2);
+    alert("Массив 3: " + array3);
+  }
+
+  // Задача 2: Вывод 5-го элемента, изменение
+  function task8() {
+    let myArray = [10, 20, 30, 40, 50];
+    alert("5-й элемент: " + myArray[4]);
+    myArray[4] = 500;
+    alert("Новый 5-й элемент: " + myArray[4]);
+  }
+  function task9() {
+  // Задача 3: Длина массива при наведении
+  let anyElement = document.body; // Выберите любой элемент
+  anyElement.addEventListener('mouseover', function() {
+    let length = [1, 2, 3].length; // Используйте любой массив
+    alert("Длина массива: " + length); 
+  });}
+
+  // Задача 4: Вывод элементов циклом for
+  function task10() {
+    let myArray = ["apple", "banana", "orange"];
+    for (let i = 0; i < myArray.length; i++) {
+      alert(myArray[i]);
+    }
+  }
+  function task11() {
+    let array1 = [1, 2, 3];
+    let array2 = new Array(4, 5, 6);
+    let array3 = Array.from("789");
+    alert("Массив 1: " + array1);
+    alert("Массив 2: " + array2);
+    alert("Массив 3: " + array3);
+    mergedArray = array1.concat(array2, array3); 
+    alert("Объединенный массив: " + mergedArray);
+  }
+
+  // Задача 7: Удаление последнего элемента (2 раза)
+  function task12() {
+    if (mergedArray.length === 0) {
+      alert("Массив пуст!");
+      return;
+    }
+    let lastElement = mergedArray.pop();
+    alert("Удален последний элемент: " + lastElement);
+    alert("Массив: " + mergedArray);
+
+    if (mergedArray.length > 0) { 
+      lastElement = mergedArray.pop();
+      alert("Удален последний элемент: " + lastElement);
+      alert("Массив: " + mergedArray);
+    }
+  }
+
+  // Задача 8: Добавление элемента в начало
+  function task13() {
+    mergedArray.unshift("Новый элемент");
+    alert("Массив с новым элементом: " + mergedArray);
+  }
+
+  // Задача 9: Сегодняшняя дата
+  function task14() {
+    let today = new Date();
+    alert("Сегодня: " + today.toLocaleDateString());
+  }
+
+  // Задача 10: Дата в формате (11 ноября 2020)
+  function task15() {
+    let date = new Date(2020, 10, 11); // Месяцы начинаются с 0 (январь - 0)
+    let options = { day: 'numeric', month: 'long', year: 'numeric' };
+    alert(date.toLocaleDateString('ru-RU', options)); 
+  }
+
+  // Задача 11: Произведение случайных чисел
+  function task16() {
+    function getRandomNumber(max) {
+      return Math.floor(Math.random() * (max + 1));
+    }
+    let num1 = getRandomNumber(50);
+    let num2 = getRandomNumber(50);
+    let product = num1 * num2;
+    alert(`Произведение ${num1} и ${num2}: ${product}`);
+  }
+  const quizQuestions = [
+      { question: "Что такое JavaScript?", options: ["Язык программирования", "Текстовый редактор", "Операционная система"], answer: 0 },
+      { question: "Как объявить переменную в JavaScript?", options: ["var", "variable", "let", "const"], answer: 0 },
+      { question: "Какой оператор используется для сравнения значений и типов данных?", options: ["==", "===", "=", "!="], answer: 1 },
+      { question: "Какой метод используется для вывода сообщения в консоль?", options: ["console.log()", "print()", "alert()", "log()"], answer: 0 },
+      { question: "Как получить доступ к элементу HTML по его ID?", options: ["getElementById()", "getElement('id')", "querySelector('#id')"], answer: 0 },
+      { question: "Какой тип данных используется для хранения набора значений?", options: ["Array", "Object", "String", "Number"], answer: 0 },
+      { question: "Что делает оператор '!'?", options: ["Сложение", "Инвертирует логическое значение", "Умножение"], answer: 1 },
+      { question: "Какой цикл используется для итерации по массиву?", options: ["for", "while", "do...while", "forEach"], answer: 0 },
+      { question: "Как добавить новый элемент в конец массива?", options: ["push()", "append()", "addToEnd()", "insert()"], answer: 0 },
+      { question: "Что такое функция в JavaScript?", options: ["Переменная", "Блок кода, который можно вызвать по имени", "Тип данных"], answer: 1 }
+    ];
+
+    let userAnswers = [];
+
+    function showQuiz() {
+      document.getElementById('quiz-container').style.display = 'block';
+      const quizForm = document.getElementById('quiz-form');
+      quizQuestions.forEach((question, index) => {
+        let questionHTML = `<p>${index + 1}. ${question.question}</p>`;
+        question.options.forEach((option, optionIndex) => {
+          questionHTML += `<input type="radio" name="question${index}" value="${optionIndex}"> ${option}<br>`;
+        });
+        quizForm.innerHTML += questionHTML;
+      });
+    }
+
+    function checkQuizResults() {
+      userAnswers = [];
+      let score = 0;
+      quizQuestions.forEach((question, index) => {
+        const selectedAnswer = document.querySelector(`input[name="question${index}"]:checked`);
+        if (selectedAnswer) {
+          userAnswers.push(parseInt(selectedAnswer.value));
+          if (parseInt(selectedAnswer.value) === question.answer) {
+            score++;
+          }
+        } else {
+          userAnswers.push(null); 
+        }
+      });
+      showResults(score);
+    }
+
+    function showResults(score) {
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('quiz-results').style.display = 'block';
+      document.getElementById('quiz-score').textContent = `Ваш результат: ${score} из ${quizQuestions.length}`;
+
+      const answersList = document.getElementById('quiz-answers');
+      answersList.innerHTML = ''; 
+      quizQuestions.forEach((question, index) => {
+        const userAnswer = userAnswers[index];
+        const isCorrect = userAnswer !== null && userAnswer === question.answer;
+        const answerText = isCorrect ? 'Верно' : (userAnswer !== null ? 'Неверно' : 'Не отвечено');
+        answersList.innerHTML += `<li>${index + 1}. ${question.question} - Ваш ответ: ${question.options[userAnswer]}, ${answerText}</li>`;
+      });
+    }
+
+  
+</script>
+
+</body>
+</html>
+```
+
